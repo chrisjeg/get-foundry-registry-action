@@ -1,0 +1,15 @@
+name: "Get Foundry container registry"
+description: "Get the url of the container registry for a Foundry instance"
+inputs:
+  foundry-url:
+    description: "The URL of the Palantir Foundry instance"
+    required: true
+  access-token:
+    description: "The access token for the Palantir Foundry instance"
+    required: false
+outputs:
+  foundry-container-registry-url:
+    description: "The URL of the container registry for the Palantir Foundry instance"
+runs:
+  using: "node20"
+  main: "dist/index.js"
