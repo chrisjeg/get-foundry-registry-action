@@ -27065,6 +27065,7 @@ const axios_1 = __nccwpck_require__(8757);
             });
             const foundryContainerRegistryUrl = response.data.domain;
             core.info(`✅ Container registry discovered for ${foundryUrl}: ${foundryContainerRegistryUrl}`);
+            core.setSecret(foundryContainerRegistryUrl);
             core.setOutput("foundry-container-registry-url", foundryContainerRegistryUrl);
         }
         catch (error) {
