@@ -24,6 +24,7 @@ import axios from "axios";
       `✅ Container registry discovered for ${foundryUrl}: ${foundryContainerRegistryUrl}`
     );
 
+    core.setSecret(foundryContainerRegistryUrl);
     core.setOutput(
       "foundry-container-registry-url",
       foundryContainerRegistryUrl
